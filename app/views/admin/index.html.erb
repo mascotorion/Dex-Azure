@@ -1,0 +1,234 @@
+<!-- Home = Dashboard -->
+
+
+
+<%= render "shared/navbar" %>
+  <%= render "shared/sidebar" %> 
+  <main role="main" class="bg-brand-grey">
+   <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-lg-2">
+      </div>
+	  
+	  <div class="<%= @middle_div_class %>">
+			<div class="pt-2 mt-2 pb-2">           
+				<%= render "shared/flash_notice" %>           
+			</div>
+			
+			<!-- Main Content -->
+			
+		      <div class="container dex-card">
+  <div class="row justify-content-center">
+    <div class="w-100 heading">
+      Get ready to sell online. Try these tips to get started.
+
+
+    </div>
+    <div class="col-md-5 nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <a class="nav-link active" id="v-pills-product-tab" data-toggle="pill" href="#v-pills-product" role="tab"
+        aria-controls="v-pills-home" aria-selected="true">
+        <span data-feather="shopping-cart"></span>
+        <span>Add Products / Services</span>
+      </a>
+      <a class="nav-link" id="v-pills-themes-tab" data-toggle="pill" href="#v-pills-themes" role="tab"
+        aria-controls="v-pills-themes" aria-selected="false">
+        <span data-feather="edit"></span>
+        <span>Customize Theme</span>
+      </a>
+
+      <a class="nav-link" id="v-pills-domain-tab" data-toggle="pill" href="#v-pills-domain" role="tab"
+        aria-controls="v-pills-domain" aria-selected="false">
+        <span data-feather="globe"></span>
+        <span>Add Domain</span></a>
+
+      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+        aria-controls="v-pills-settings" aria-selected="false">
+        <span data-feather="download-cloud"></span>
+        <span>Download Dex App</span>
+
+      </a>
+    </div>
+    <div class=" col-md-7 tab-content" id="v-pills-tabContent">
+      <div class="tab-pane fade show active" id="v-pills-product" role="tabpanel" aria-labelledby="v-pills-product-tab">
+        <div class="right-content-pane">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 pt-3 ">
+              <h6 class="sub-heading">Add your First Product/Services</h6>
+              <p>You can add physical items, digital downloads, services or anything else you dream up</p>
+              <div class="btn-cta-holder">
+                <a href="/products/new" rel="noopener noreferrer" class="btn btn-cta"><span class="">Add
+                    Product</span></a>
+              </div>
+
+            </div>
+            <div class="col-lg-4 pt-3">
+              <img src="/images/admin/home-onboard-prod-incomplete.svg" alt="" class="img-fluid">
+            </div>
+            <div class="col-lg-12">
+
+              <a href="/install" class="btn-cta-bottom">
+                <span data-feather="help-circle"></span>
+                <span>Learn more about products</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="v-pills-themes" role="tabpanel" aria-labelledby="v-pills-themes-tab">
+        <div class="right-content-pane">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 pt-3 ">
+              <h6 class="sub-heading">Edit the look and feel of your online store</h6>
+              <p>Choose a theme and add a logo, product slideshow, and colors that match your brand.</p>
+              <div class="btn-cta-holder">
+                <a  href="/themes" rel="noopener noreferrer" class="btn btn-cta">
+                  <span class="">Customize theme</span>
+                </a>
+              </div>
+
+            </div>
+            <div class="col-lg-4 pt-3">
+              <img src="/images/admin/home-onboard-theme-incomplete.svg" alt="" class="img-fluid">
+            </div>
+
+            <div class="col-lg-12">
+              <a href="/install" class="btn-cta-bottom">
+                <span data-feather="help-circle"></span>
+                <span>Learn more about themes</span>
+              </a>
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="tab-pane fade" id="v-pills-domain" role="tabpanel" aria-labelledby="v-pills-domain-tab">
+        <div class="right-content-pane">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 pt-3 ">
+              <h6 class="sub-heading">Strengthen your brand with a custom domain</h6>
+              <p>Your current domain is [company name].dex.com but you can add a custom domain to help customers find
+                your online store.</p>
+              <div class="btn-cta-holder"><a  href="/install" rel="noopener noreferrer"
+                  class="btn btn-cta">
+                  <span class="">Add domain</span>
+                </a>
+              </div>
+
+            </div>
+            <div class="col-lg-4 pt-3">
+              <img src="/images/admin/home-onboard-domain-incomplete.svg" alt="" class="img-fluid">
+            </div>
+
+            <div class="col-lg-12">
+
+              <a href="/install" class="btn-cta-bottom">
+                <span data-feather="help-circle"></span>
+                <span>Learn more about domains</span>
+              </a>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+        <div class="right-content-pane">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 pt-3">
+              <h6 class="sub-heading">Download DEX app</h6>
+              <p>Install Digital Experiences app on your device.</p>
+              <div class="btn-cta-holder"><a  href="/install" rel="noopener noreferrer"
+                  class="btn btn-cta"><span class="">Add domain</span></a></div>
+
+            </div>
+            <div class="col-lg-4 pt-3">
+              <img src="/images/admin/pos-onboard-downloadpos-incomplete.svg" alt="" class="img-fluid">
+            </div>
+
+            <div class="col-lg-12">
+
+              <a href="/install" class="btn-cta-bottom">
+                <span data-feather="help-circle"></span>
+                <span>Learn more about DEX app</span>
+              </a>
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Guided video tutorials -->
+
+<div class="container dex-card pt-4 pb-4">
+  <div class="row justify-content-center">
+ 
+    <div class="col-lg-12">
+      <h6>Get to know Shopify with guided video tutorials</h6>
+      <p>
+        Keep learning with new and upcoming videos by subscribing to the Shopify Help Center YouTube Channel.
+      </p>
+    </div>
+
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-lg-11">
+      <a href="#" target="_blank" class="btn-cta-grey">Explore YouTube Channel</a>
+    </div>
+    <div class="col-lg-1">
+      <img src="/images/admin/youtube.webp" alt="" class="img-fluid">
+    </div>
+  </div>
+
+</div>
+
+<!-- Shipping Policy -->
+
+<div class="container dex-card pt-4 pb-4">
+  <div class="row justify-content-center">
+ 
+    <div class="col-lg-12">
+      <h6>Add a shipping policy to build trust with customers</h6>
+      <p>
+        64% of customers look for shipping costs on the product page. Easy-to-find shipping details encourage them to shop with you.
+      </p>
+    </div>
+
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-lg-11">
+      <a href="#"  class="btn-cta-grey">Add shipping policy</a>
+    </div>
+    <div class="col-lg-1">
+      
+    </div>
+  </div>
+
+</div>
+			
+			<!-- End Main Content -->
+			
+			
+            <%= render "shared/footer" %>
+      </div>
+	  
+	  <div class="<%= @div_class %>">
+        <%= render "shared/activity" %>
+
+
+      </div>
+	  
+	   </div>
+  </div>
+  

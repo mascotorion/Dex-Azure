@@ -1,0 +1,109 @@
+
+
+
+
+
+
+<%= render "shared/navbar" %> <%= render "shared/sidebar" %>
+<main role="main" class="bg-brand-grey">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-2"></div>
+
+            <div class="<%= @middle_div_class %>">
+                <div class="pt-2 mt-2 pb-2">
+                    <%= render "shared/flash_notice" %>
+                </div>
+
+
+                <!-- Main Content -->
+					 
+					 <div class="container">
+					    <div class="products">
+					       <div class="row">
+							  <div class="col-md-12">
+								<p id="notice"><%= notice %></p>
+							  </div>
+							</div>
+							<div class="row">
+							  <div class="col-lg-12 pl-0 pr-0">
+								<%= render "breadcrumb" -%>
+								<h2>Products</h2>
+							  </div>
+							</div>
+							    <div class="row actionLayout">
+								  <div class="col-lg-6 pl-2">
+									<div class="row">
+									  <button type="button" class="actionMenu">
+										<span class="menuAction_ContentWrapper">
+										  <span class="menuAction_IconWrapper">
+											<span class="dex-icon">
+											  <svg class="svg-icon" aria-hidden="true" focusable="false" viewbox="0 0 20 20">
+												<path
+												  d="M13.707 6.707a.997.997 0 0 1-1.414 0L11 5.414V13a1 1 0 1 1-2 0V5.414L7.707 6.707a.999.999 0 1 1-1.414-1.414l3-3a.999.999 0 0 1 1.414 0l3 3a.999.999 0 0 1 0 1.414zM17 18H3a1 1 0 1 1 0-2h14a1 1 0 1 1 0 2z">
+												</path>
+											  </svg>
+											</span>
+										  </span>
+										  <span>Export</span>
+										</span>
+									  </button>
+									  <button type="button" class="actionMenu">
+										<span class="menuAction_ContentWrapper">
+										  <span class="menuAction_IconWrapper">
+											<span class="dex-icon">
+											  <svg class="svg-icon" aria-hidden="true" focusable="false" viewbox="0 0 20 20">
+												<path
+												  d="M9.293 13.707l-3-3a.999.999 0 1 1 1.414-1.414L9 10.586V3a1 1 0 1 1 2 0v7.586l1.293-1.293a.999.999 0 1 1 1.414 1.414l-3 3a.999.999 0 0 1-1.414 0zM17 16a1 1 0 1 1 0 2H3a1 1 0 1 1 0-2h14z">
+												</path>
+											  </svg>
+											</span>
+										  </span>
+										  <span>Import</span>
+										</span>
+									  </button>
+									</div>
+								  </div>
+								  <div class="col-lg-6  pr-0">
+									<div class="">
+									  <%= link_to "New Product", new_product_path, :class => "action-button float-right" %>
+									</div>
+								  </div>
+								</div>
+							    
+								
+								
+								<div class="<%= @div_no_product %>">
+								  <%= content_tag :div, class: "col-lg-7 text-center align-center" do -%>
+								  <%= image_tag(root_path + "images/admin/demo_version_add_new_product_action_layout.svg", :class => "img-fluid", :alt => "add new products") -%>
+								  <h6>
+									Add and manage your products
+								  </h6>
+								  <p class="mx-auto">
+									This is where you’ll add products and manage your pricing. You can also import and export your product
+									inventory.
+								  </p>
+								  <%= link_to "New Product", new_product_path, :class => "action-button " %>
+								  <a class=" " href="#"><span>Find product</span>
+								  </a>
+								  <% end -%>
+							    </div>
+								
+					    </div>
+					</div>
+				
+			   <!-- End Main Content -->
+			   
+			   
+			   
+
+               <%= render "shared/footer" %>
+			   
+            </div>
+
+            <div class="<%= @div_class %>">
+                <%= render "shared/activity" %>
+            </div>
+        </div>
+    </div>
+</main>

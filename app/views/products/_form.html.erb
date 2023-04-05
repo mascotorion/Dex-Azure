@@ -1,0 +1,49 @@
+<%= form_with(model: product, local: true) do |form| %>
+  <% if product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+        <% product.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title ,:class=>"form-control", :placeholder=>"Multi Colored Short sleeve t-shirt" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :description %>
+    
+    <%= form.rich_text_area :description ,:class=>"form-control" %>
+  </div>
+
+
+  <div class="form-group">
+    <%= form.label :handle, :value=>"Product Name" %>
+    <%= form.text_field :handle ,:class=>"form-control", :placeholder=>"Short sleeve t-shirt" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :product_type %>
+    <%= form.text_field :product_type ,:class=>"form-control"%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :vendor %>
+    <%= form.text_field :vendor ,:class=>"form-control"%>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :published_at %>
+    <%= form.datetime_select :published_at %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
